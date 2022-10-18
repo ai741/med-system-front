@@ -9,6 +9,10 @@ import {selectIsAuth, fetchAuthMe} from "./redux/slices/auth"
 import {useDispatch, useSelector} from "react-redux"
 import { Cabinet } from "./pages/Cabinet";
 import { Appointment } from "./pages/Appointment";
+import { AdminPanel } from "./pages/AdminPanel";
+import {Users} from "./pages/CRUD/Users"
+import {Roles} from "./pages/CRUD/Roles"
+import {Doctors} from "./pages/CRUD/Doctors"
 
 function App() {
   const dispatch = useDispatch()
@@ -27,6 +31,11 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/appointment" element={<Appointment />} />
         <Route path="/cabinet" element={<Cabinet />} />
+        <Route path="/admin" element={<AdminPanel />}>
+          <Route path="users" element={<Users />} />
+            <Route path="roles" element={<Roles />} />
+            <Route path="doctors" element={<Doctors />} />
+          </Route>
       </Routes>
     </div>
   );
