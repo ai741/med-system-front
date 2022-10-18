@@ -1,4 +1,4 @@
-import { Link, Route, Routes } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Aside = () => {
   return (
@@ -7,32 +7,29 @@ export const Aside = () => {
         <ul class="space-y-2">
           <li>
             <Link to="users">
-              <a
-                href="#"
+              <span
                 class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span class="ml-3">Пользователи</span>
-              </a>
+              </span>
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="roles">
-              <a
-                href="#"
+              <span
                 class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span class="flex-1 ml-3 whitespace-nowrap">Роли</span>
-              </a>
+              </span>
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="doctors">
-              <a
-                href="#"
+              <span
                 class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700"
               >
                 <span class="flex-1 ml-3 whitespace-nowrap">Врачи</span>
-              </a>
+              </span>
             </Link>
           </li>
         </ul>

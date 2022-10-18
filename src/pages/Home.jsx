@@ -1,11 +1,8 @@
-import { Header } from "../components/Header/Header"
 
-
-
-export  const Home = () =>{
-    return(
-        <>
-            
-        </>
-    )
-}
+export const Home = () => {
+  return (
+    <>
+      <h1>Домашняя страница</h1>
+    </>
+  );
+};

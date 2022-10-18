@@ -1,4 +1,3 @@
-import { Aside } from "../../components/Aside/Aside";
 
 export const Doctors = () => {
   const arr = [1, 2, 3, 4, 5, 3, 3, 3, 3, 3, 3, 3];

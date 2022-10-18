@@ -1,4 +1,3 @@
-
 import { useForm } from "react-hook-form";
 import { fetchAuth, selectIsAuth } from "../redux/slices/auth";
 import { Navigate } from "react-router-dom";
@@ -11,7 +10,7 @@ export const Login = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     defaultValues: {
       email: "admin@admin.ru",
