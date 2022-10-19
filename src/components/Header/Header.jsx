@@ -102,7 +102,7 @@ export const Header = () => {
                   Анализы
                 </Link>
               </li>
-              {userData?.roles === "ADMIN" && isAuth ? (
+              {!isAuth ? (
                 <li>
                   <Link
                     to="/admin"

@@ -7,7 +7,7 @@ import { useEffect } from "react";
 export const EditUser = () => {
   const dispatch = useDispatch();
   const params = useParams();
-  // const userData = useSelector((state) => state.users.data);
+  const userData = useSelector((state) => state.users.data);
 
   const {
     register,
@@ -22,7 +22,12 @@ export const EditUser = () => {
   }, []);
 
   const onSubmit = (values) => {
-    dispatch(fetchUpdateUsers(params.id, values));
+    console.log(values);
+    let data = {
+      id: params.id,
+      values: values
+    }
+    dispatch(fetchUpdateUsers(data));
   };
 
   return (
@@ -47,6 +52,7 @@ export const EditUser = () => {
                     Почта
                   </label>
                   <input
+                    defaultValue={userData?.email}
                     type="email"
                     name="email"
                     id="email"
@@ -63,6 +69,7 @@ export const EditUser = () => {
                     ФИО
                   </label>
                   <input
+                  defaultValue={userData?.username}
                     type="username"
                     name="username"
                     id="username"
@@ -79,6 +86,7 @@ export const EditUser = () => {
                     Телефон
                   </label>
                   <input
+                  defaultValue={userData?.telephone}
                     type="telephone"
                     name="telephone"
                     id="telephone"
@@ -110,6 +118,7 @@ export const EditUser = () => {
                     Роль
                   </label>
                   <input
+                  defaultValue={userData?.roles}
                     type="roles"
                     id="roles"
                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"

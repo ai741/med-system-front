@@ -30,9 +30,9 @@ export const fetchDeleteUsers = createAsyncThunk(
 
 export const fetchUpdateUsers = createAsyncThunk(
   "users/fetchUpdateUsers",
-  async (id, params) => {
-    const { data } = await axios.patch(`/users/updateUser/${id}`, params);
-    return data;
+  async (data) => {
+    const { lvl } = await axios.patch(`/users/updateUser/${data.id}`, data.values);
+    return lvl;
   }
 );
 
